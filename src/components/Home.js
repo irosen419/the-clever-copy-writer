@@ -1,8 +1,12 @@
 import React from 'react'
+import Carousel from './Carousel'
 function Home() {
     return (
         <div className="home">
-            <img className="home__image" src="/images/Screen Shot 2021-01-23 at 1.10.23 PM.png" alt="Richard Stilitino" />
+            <div className="home__top">
+                <img className="top__image" src="/images/Screen Shot 2021-01-23 at 1.10.23 PM.png" alt="Richard Stilitino" />
+                <Carousel />
+            </div>
             <div className="home__missionStatement">
                 <p>Mark Twain once said, “Many a small thing has been made large by the right kind of advertising.” The reality is that good advertising can make the difference between a struggling business and one that prospers for years to come.
                 <br></br>
