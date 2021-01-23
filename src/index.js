@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Router, Route, hashHistory } from 'react-router'
 import reportWebVitals from './reportWebVitals';
 
+import App from './App';
+import Home from './components/Home';
+import About from './components/About'
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router history={hashHistory}>
+    <Route path="/" component={App}>
+      <Route path="home" component={Home} />
+      <Route path="about" component={About} />
+
+    </Route>
+  </Router>,
   document.getElementById('root')
 );
 
