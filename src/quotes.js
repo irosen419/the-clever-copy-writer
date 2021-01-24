@@ -8,7 +8,7 @@ const quotes = [
         'speaker': 'Napoleon Hill'
     },
     {
-        'url': '/images/Charles M Schulz.png',
+        'url': '/images/Charles M Shulz.png',
         'speaker': 'Charles M Schulz'
     }
 ]

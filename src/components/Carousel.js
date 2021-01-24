@@ -1,19 +1,37 @@
-import { useState, useEffect } from 'react'
 import quoteURLs from '../quotes'
+
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from 'mdbreact';
+
 function Carousel() {
-    const [quote, setQuote] = useState(0)
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setQuote(prevQuote => ((prevQuote + 1) % quoteURLs.length))
-        }, 2000)
-        return () => clearInterval(interval)
-    }, [])
+
+    const mapImages = () => {
+        return quoteURLs.map(imgObj => {
+            return (< MDBCarouselInner key={imgObj.speaker} >
+                <MDBCarouselItem itemId={quoteURLs.indexOf(imgObj) + 1}>
+                    <MDBView>
+                        <img className="quote" src={imgObj.url} alt={imgObj.speaker} />
+                    </MDBView>
+                </MDBCarouselItem>
+            </ MDBCarouselInner>)
+        })
+    }
 
     return (
         <div className="top__carousel">
-            <img className="quote" src={quoteURLs[quote].url} alt={quoteURLs[quote].speaker} />
+            <MDBContainer>
+                <MDBCarousel
+                    activeItem={1}
+                    length={quoteURLs.length}
+                    showControls={false}
+                    showIndicators={false}
+                    interval={5000}
+                    slide
+                >
+                    {mapImages()}
+                </MDBCarousel>
+            </MDBContainer>
         </div>
     )
 }
-
+//
 export default Carousel
