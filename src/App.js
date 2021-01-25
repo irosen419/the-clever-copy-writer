@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import './scss/styles.css'
 
 function App(props) {
+
   return (
     <div className="App">
       <Header />

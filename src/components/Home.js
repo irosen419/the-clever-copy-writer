@@ -4,7 +4,7 @@ function Home() {
     return (
         <div className="home">
             <div className="home__top">
-                <img className="top__image" src="/images/Screen Shot 2021-01-23 at 1.10.23 PM.png" alt="Richard Stilitino" />
+                <img className="top__image" src="/images/Head Shot.png" alt="Richard Stilitino" />
                 <Carousel />
             </div>
             <div className="home__missionStatement">
