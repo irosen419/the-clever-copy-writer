@@ -10,7 +10,7 @@ body {
     font-family: 'Fraunces', serif;
 
     background: $babyBlue;
-    // padding-bottom: 3.75rem;
+
 
     height: fit-content;
     
@@ -30,6 +30,7 @@ body {
 }
 
 .header {
+    position: relative;
     height: 4rem;
     width: 100%;
 
@@ -44,16 +45,103 @@ body {
     }
     
     &__right {
+        &.links {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 30%;
+            margin-right: 10%;
+            font-size: $headerMain;
+            
+            list-style: none;
+        }
+
+        &.menu {
+            width: 50px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            margin-right: 10%;
+
+            > span {
+                display: block;
+                width: 26px;
+                height: 2px;
+                background-color: $blueWhite;
+    
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .dropdown {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        z-index: 1000;
+        width: 100%;
+
         display: flex;
-        justify-content: space-evenly;
+        flex-direction: column;
         align-items: center;
 
-        width: 30%;
-        margin-right: 10%;
-        font-size: $headerMain;
-
-        list-style: none;
+        background: linear-gradient(rgba(#93E1Ed, 0.7) 30%, rgba(#02B9F3, 0.7), rgba(#018ABD, 0.8) 75%, rgba(#005C9D, 1));
         
+        li {
+            width: 100%;
+            height: 75px;
+            text-align: center;
+
+            line-height: 75px;
+            font-size: $logoMobile;
+            a {
+                color: black;
+            }
+
+            &:hover {
+                &#home {
+                    background: rgba(#888888, 0.3);
+                    // opacity: 1;
+                }
+
+                &#about {
+                    background: rgba(#888888, 0.3);
+                }
+
+                &#samples {
+                    background: rgba(#888888, 0.3);
+                }
+
+                &#contact {
+                    background: rgba(#888888, 0.3);
+                }
+            }
+        }
+
+    }
+
+    .hide-for-mobile {
+        @include breakpoint-down(medium) {
+            display: none;
+        }
+    }
+
+    .hide-for-desktop {
+        @include breakpoint-up(large) {
+            display: none;
+        }
     }
 
 }
@@ -146,9 +234,7 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-    body {
-        max-width: 100vw !important;
-    }
+    
     .home {
         &__top {
             height: 150px;
@@ -228,5 +314,23 @@ body {
     .App {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .header {
+        &__left {
+            font-size: 1.25rem;
+        }
+    }
+    .home {
+        &__top {
+            height: 150px;
+
+            div.top__carousel {
+                top: 20%;
+                height: 40%;
+            }
+        }
     }
 }
