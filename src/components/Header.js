@@ -7,12 +7,20 @@ function Header() {
     const links = () => {
         return (
             <>
-                <li id="home"><Link to="/home">Home</Link></li>
-                <li id="about"><Link to="/about">About</Link></li>
-                <li id="samples"><Link to="/samples">Samples</Link></li>
-                <li id="contact"><Link to="/contact">Contact</Link></li>
+                <Link to="/home" id="home" onClick={decideMenu}><li>Home</li></Link>
+                <Link to="/about" id="about" onClick={decideMenu}><li>About</li></Link>
+                <Link to="/samples" id="samples" onClick={decideMenu}><li>Samples</li></Link>
+                <Link to="/contact" id="contact" onClick={decideMenu}><li>Contact</li></Link>
             </>
         )
+    }
+
+    const decideMenu = () => {
+        if (menu) {
+            setMenu(false)
+        } else {
+            setMenu(true)
+        }
     }
 
     return (
@@ -23,7 +31,7 @@ function Header() {
             <ul className="header__right links hide-for-mobile">
                 {links()}
             </ul>
-            <div className="header__right menu hide-for-desktop" onClick={() => setMenu(prevMenu => !prevMenu)}>
+            <div className="header__right menu hide-for-desktop" onClick={decideMenu}>
                 <span></span>
                 <span></span>
                 <span></span>

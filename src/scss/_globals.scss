@@ -91,29 +91,31 @@ body {
         left: 0;
         transform: translateY(100%);
         z-index: 1000;
+
         width: 100%;
+        height: 100vh;
 
         display: flex;
         flex-direction: column;
         align-items: center;
 
         background: linear-gradient(rgba(#93E1Ed, 0.7) 30%, rgba(#02B9F3, 0.7), rgba(#018ABD, 0.8) 75%, rgba(#005C9D, 1));
-        
-        li {
+        list-style: none;
+        // padding: 25px 0;
+        a {
             width: 100%;
             height: 75px;
             text-align: center;
 
             line-height: 75px;
             font-size: $logoMobile;
-            a {
+            li {
                 color: black;
             }
 
             &:hover {
                 &#home {
                     background: rgba(#888888, 0.3);
-                    // opacity: 1;
                 }
 
                 &#about {
@@ -131,6 +133,7 @@ body {
         }
 
     }
+
 
     .hide-for-mobile {
         @include breakpoint-down(medium) {
@@ -208,6 +211,25 @@ body {
     }
 }
 
+.samples {
+    width: 100%;
+    height: 100vh;
+    background: black;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // align-items: center;
+
+    .sample {
+        height: 100px;
+        border: 1px solid red;
+
+        flex-grow: 1fr;
+        min-width: 50%;
+    }
+}
+
 .footer {
 
     width: 100%;
@@ -246,8 +268,8 @@ body {
             }
 
             div.top__carousel {
-                top: 2.5%;
-                height: 33%
+                top: 10%;
+                height: 90%
             }
         }
 
