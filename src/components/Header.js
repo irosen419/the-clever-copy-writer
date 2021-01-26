@@ -31,7 +31,7 @@ function Header() {
             <ul className="header__right links hide-for-mobile">
                 {links()}
             </ul>
-            <div className="header__right menu hide-for-desktop" onClick={decideMenu}>
+            <div className={`header__right menu hide-for-desktop ${menu && 'open'}`} onClick={decideMenu}>
                 <span></span>
                 <span></span>
                 <span></span>

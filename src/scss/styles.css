@@ -88,6 +88,10 @@ body a:visited {
   width: 26px;
   height: 2px;
   background-color: #F8F8FF;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform-origin: 3px 1px;
+          transform-origin: 3px 1px;
 }
 
 .header__right.menu > span:not(:last-child) {
@@ -96,6 +100,20 @@ body a:visited {
 
 .header__right.menu:hover {
   cursor: pointer;
+}
+
+.header__right.menu.open > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header__right.menu.open > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__right.menu.open > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .header .dropdown {

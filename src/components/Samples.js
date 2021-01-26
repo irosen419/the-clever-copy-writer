@@ -3,7 +3,7 @@ import files from '../data/sampleFiles'
 function Samples() {
     return (
         <div className="samples">
-            <h1>Samples</h1>
+            <h1>Portfolio</h1>
             <h2 id="byline">Here is where you will find select samples of my work.</h2>
             <div className="samplesInner">
                 {files.map(({ title, address }) =>
