@@ -1,4 +1,4 @@
-import quoteURLs from '../quotes'
+import quoteURLs from '../data/quotes'
 
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from 'mdbreact';
 
