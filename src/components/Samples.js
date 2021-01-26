@@ -7,7 +7,7 @@ function Samples() {
             <h2 id="byline">Here is where you will find select samples of my work.</h2>
             <div className="samplesInner">
                 {files.map(({ title, address }) =>
-                    <div className="sample">
+                    <div className="sample" key={title}>
                         <p>{title}</p> <a href={address} target="_blank" rel="noreferrer">View</a>
                     </div>
                 )}

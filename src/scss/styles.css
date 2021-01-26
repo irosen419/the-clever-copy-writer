@@ -345,15 +345,8 @@ body a:visited {
           align-items: center;
 }
 
-.footer__contactButton {
-  width: 10%;
-  height: 80%;
-  border: none;
-  border-radius: 0.625rem;
-  background: linear-gradient(161deg, #005C9D 30%, #018ABD, #02B9F3 75%, #93E1Ed);
-  text-align: center;
-  line-height: 45px;
-  font-size: 1.5rem;
+.footer p {
+  color: white;
 }
 
 @media only screen and (max-width: 780px) {

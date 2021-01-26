@@ -1,6 +1,10 @@
 import React from 'react'
 import Carousel from './Carousel'
 function Home() {
+    console.log('%c Created by Ian Rosen', 'font-weight: bold; font-size: 20px;color: blue; text-shadow: 1px 1px 0 rgb(0,0,0)');
+    console.log('%c Find him at: \n http://ianprosen.com ', 'font-size: 12px')
+
+    // \n http://linkedin.com/in/irosen419 \n http://github.com/irosen419 \n http://youtube.com/channel/UCPFQkVq1EZx1Umttzp-paDQ
     return (
         <div className="home">
             <div className="home__top">

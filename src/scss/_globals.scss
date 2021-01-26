@@ -306,20 +306,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    &__contactButton {
-        width: 10%;
-        height: 80%;
 
-        border: none;
-        border-radius: 0.625rem;
-        background: linear-gradient(161deg,#005C9D 30%, #018ABD, #02B9F3 75%, #93E1Ed);
-
-        text-align: center;
-        line-height: 45px;
-        font-size: 1.5rem;
-        
+    p {
+        color: white;
     }
+    
+    // &__contactButton {
+    //     width: 10%;
+    //     height: 80%;
+
+    //     border: none;
+    //     border-radius: 0.625rem;
+    //     background: linear-gradient(161deg,#005C9D 30%, #018ABD, #02B9F3 75%, #93E1Ed);
+
+    //     text-align: center;
+    //     line-height: 45px;
+    //     font-size: 1.5rem;
+        
+    // }
 }
 
 @media only screen and (max-width: 780px) {

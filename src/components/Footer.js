@@ -1,8 +1,8 @@
-import { Link } from 'react-router'
 function Footer() {
+    let d = new Date()
     return (
         <div className="footer">
-            <Link className="footer__contactButton" to="/contact">Contact</Link>
+            <p>© {d.getFullYear()} - The Clever Coy Writer</p>
         </div >
     )
 }
