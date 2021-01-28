@@ -7,14 +7,15 @@ import App from './App';
 import Home from './components/Home';
 import About from './components/About'
 import Samples from './components/Samples'
+import Contact from './components/Contact';
 
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={App}>
       <Route path="home" component={Home} />
       <Route path="about" component={About} />
-      <Route path="samples" component={Samples} />
-
+      <Route path="portfolio" component={Samples} />
+      <Route path="contact" component={Contact} />
     </Route>
   </Router>,
   document.getElementById('root')
