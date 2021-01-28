@@ -330,6 +330,18 @@ body a:visited {
   cursor: pointer;
 }
 
+.contact form input {
+  border: inset;
+}
+
+.contact form input:focus {
+  outline: none;
+}
+
+.contact form input.error {
+  border-color: red;
+}
+
 .footer {
   width: 100%;
   background: #000000;

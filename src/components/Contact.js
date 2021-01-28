@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Input from './Input'
 
 function Contact() {
@@ -9,6 +9,27 @@ function Contact() {
         'website': '',
         'content': ''
     })
+
+    const [errors, setErrors] = useState({
+        'nameError': '',
+        'emailError': ''
+    })
+
+    useEffect(() => {
+        if (formData.name.length > 0 && formData.name.length < 2) {
+            setErrors({ ...errors, nameError: 'Name must be at least 2 characters' })
+        } else if (formData.name.length >= 2) {
+            setErrors({ ...errors, nameError: '' })
+        }
+    }, [formData.name])
+
+    useEffect(() => {
+        if (formData.email.length > 0 && !formData.email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,}$/)) {
+            setErrors({ ...errors, emailError: 'Please provide a valid email' })
+        } else if (formData.email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,}$/)) {
+            setErrors({ ...errors, emailError: '' })
+        }
+    }, [formData.email])
 
     const changeHandler = (name, input) => {
         setFormData({ ...formData, [name]: input })
@@ -23,18 +44,18 @@ function Contact() {
         <div className="contact">
             <form onSubmit={submitHandler}>
                 <Input
-                    _type='text'
-                    _placeholder='Name'
+                    _placeholder='Name *'
                     _name='name'
                     _changeHandler={changeHandler}
                     _value={formData.name}
+                    _errors={errors.nameError}
                 />
                 <Input
-                    _type='email'
                     _placeholder='Email Address *'
                     _name='email'
                     _changeHandler={changeHandler}
                     _value={formData.email}
+                    _errors={errors.emailError}
                 />
                 <Input
                     _placeholder='Website'
@@ -51,7 +72,7 @@ function Contact() {
                 />
                 <Input
                     _type='submit'
-                    _name='submit'
+                    _value='Submit'
                 />
 
             </form>

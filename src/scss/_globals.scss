@@ -297,6 +297,20 @@ body {
 
 }
 
+.contact {
+    form {
+        input{
+            border: inset;
+            &:focus {
+                outline: none;
+            }
+            &.error {
+                border-color: red
+            }
+        }
+    }
+}
+
 .footer {
 
     width: 100%;
