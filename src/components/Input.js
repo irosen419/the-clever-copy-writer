@@ -1,15 +1,12 @@
-import { useState } from 'react'
+const Input = ({ _type, _placeholder, _name, _changeHandler, _value }) =>
 
-function Input({ type = 'text', placeholder = '', name = '', changeHandler = null, value = null }) {
-
-    return (
-        <input
-            type={type}
-            placeholder={placeholder}
-            name={name}
-            value={value}
-            onChange={({ target: { value } }) => changeHandler(name, value)} />
-    )
-}
+(
+    <input
+        type={_type}
+        placeholder={_placeholder}
+        name={_name}
+        value={_value}
+        onChange={({ target: { value } }) => _changeHandler(_name, value)} />
+)
 
 export default Input
