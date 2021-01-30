@@ -64,6 +64,7 @@ function Contact() {
 
     return (
         <div className="contact">
+            <h1>Contact</h1>
             <form onSubmit={submitHandler}>
                 <Input
                     _placeholder='Name *'
@@ -85,13 +86,14 @@ function Contact() {
                     _changeHandler={changeHandler}
                     _value={formData.website}
                 />
-                <Input
+                {/* <Input
                     _type='textarea'
                     _placeholder='What can I do for you?'
                     _name='content'
                     _changeHandler={changeHandler}
                     _value={formData.content}
-                />
+                /> */}
+                <textarea placeholder='What can I do for you?' name='content' onChange={({ target: { value } }) => changeHandler('content', value)} value={formData.content} />
                 <Input
                     _type='submit'
                     _value='Submit'

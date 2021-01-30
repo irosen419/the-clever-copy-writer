@@ -9,7 +9,7 @@ function Header() {
             <>
                 <Link to="/home" id="home" onClick={() => decideMenu()}><li>Home</li></Link>
                 <Link to="/about" id="about" onClick={() => decideMenu()}><li>About</li></Link>
-                <Link to="/samples" id="samples" onClick={() => decideMenu()}><li>Samples</li></Link>
+                <Link to="/portfolio" id="portfolio" onClick={() => decideMenu()}><li>Portfolio</li></Link>
                 <Link to="/contact" id="contact" onClick={() => decideMenu()}><li>Contact</li></Link>
             </>
         )
