@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Input from './Input'
+import * as emailjs from 'emailjs-com'
 
 function Contact() {
 
@@ -36,9 +37,30 @@ function Contact() {
     }
 
     const submitHandler = (e) => {
+
         e.preventDefault()
-        console.log(formData)
+
+        const serviceID = process.env.REACT_APP_SERVICE_ID
+        const templateId = process.env.REACT_APP_TEMPLATE_ID
+        const userID = process.env.REACT_APP_USER_ID
+
+        emailjs.send(
+            serviceID,
+            templateId,
+            formData,
+            userID
+        ).then(res => {
+            setFormData({
+                'name': '',
+                'email': '',
+                'website': '',
+                'content': ''
+            })
+            console.log('Email successfully sent!')
+        })
+            .catch(err => console.error('There has been an error.  Here some thoughts on the error that occured:', err))
     }
+
 
     return (
         <div className="contact">
