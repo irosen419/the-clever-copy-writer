@@ -1,4 +1,4 @@
-function Input({ _type, _placeholder, _name, _changeHandler, _value, _errors }) {
+function Input({ _type, _placeholder, _name, _changeHandler, _value, _errors, _disable }) {
 
     return (
         <div className='inputDiv'>
@@ -9,6 +9,7 @@ function Input({ _type, _placeholder, _name, _changeHandler, _value, _errors }) 
                 value={_value}
                 onChange={({ target: { value } }) => _changeHandler(_name, value)}
                 className={_errors && 'error'}
+                disabled={_name === 'submit' && _disable}
             />
             <p>{_errors}</p>
         </div>

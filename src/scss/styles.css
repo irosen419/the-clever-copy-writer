@@ -418,46 +418,39 @@ body a:visited {
   border-color: red;
 }
 
-.contact form div.inputDiv input::-webkit-input-placeholder {
-  text-align: top;
+.contact form div.inputDiv input[type="submit"] {
+  padding: 0;
+  width: 20%;
+  height: 50px;
 }
 
-.contact form div.inputDiv input:-ms-input-placeholder {
-  text-align: top;
-}
-
-.contact form div.inputDiv input::-ms-input-placeholder {
-  text-align: top;
-}
-
-.contact form div.inputDiv input::placeholder {
-  text-align: top;
+.contact form div.inputDiv input[type="submit"]:hover {
+  cursor: pointer;
 }
 
 .contact form textarea {
   height: 200px;
-  width: 45%;
+  width: 100%;
   font-size: 1.25rem;
+  border: 1px solid #9a9a9a;
+  border-radius: 10px;
+  padding: 2% 3.5%;
 }
 
 .contact form textarea::-webkit-input-placeholder {
   font-family: 'Fraunces', serif;
-  padding: 2% 4%;
 }
 
 .contact form textarea:-ms-input-placeholder {
   font-family: 'Fraunces', serif;
-  padding: 2% 4%;
 }
 
 .contact form textarea::-ms-input-placeholder {
   font-family: 'Fraunces', serif;
-  padding: 2% 4%;
 }
 
 .contact form textarea::placeholder {
   font-family: 'Fraunces', serif;
-  padding: 2% 4%;
 }
 
 .contact form textarea:focus {

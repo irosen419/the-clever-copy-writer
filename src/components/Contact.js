@@ -16,6 +16,8 @@ function Contact() {
         'emailError': ''
     })
 
+    const [disableSubmit, setDisableSubmit] = useState(true)
+
     useEffect(() => {
         if (formData.name.length > 0 && formData.name.length < 2) {
             setErrors({ ...errors, nameError: 'Name must be at least 2 characters' })
@@ -31,6 +33,14 @@ function Contact() {
             setErrors({ ...errors, emailError: '' })
         }
     }, [formData.email])
+
+    useEffect(() => {
+        if (errors.nameError.length > 0 || errors.emailError.length > 0) {
+            setDisableSubmit(true)
+        } else {
+            setDisableSubmit(false)
+        }
+    }, [errors])
 
     const changeHandler = (name, input) => {
         setFormData({ ...formData, [name]: input })
@@ -93,15 +103,19 @@ function Contact() {
                     _changeHandler={changeHandler}
                     _value={formData.content}
                 /> */}
-                <textarea
-                    placeholder='What can I do for you?'
-                    name='content'
-                    value={formData.content}
-                    onChange={({ target: { value } }) => changeHandler('content', value)}
-                />
+                <div className='inputDiv'>
+                    <textarea
+                        placeholder='What can I do for you?'
+                        name='content'
+                        value={formData.content}
+                        onChange={({ target: { value } }) => changeHandler('content', value)}
+                    />
+                </div>
                 <Input
                     _type='submit'
                     _value='Submit'
+                    _name='submit'
+                    _disable={disableSubmit}
                 />
 
             </form>

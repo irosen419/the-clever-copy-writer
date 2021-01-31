@@ -364,19 +364,29 @@ body {
                     border-color: red
                 }
 
-                &::placeholder {
-                    text-align: top;
+                &[type="submit"] {
+                    padding: 0;
+                    width: 20%;
+                    height: 50px;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
         }
 
         textarea {
             height: 200px;
-            width: 45%;
+            width: 100%;
             font-size: 1.25rem;
+            border: 1px solid rgb(154, 154, 154);
+            border-radius: 10px;
+            padding: 2% 3.5%;
+
+
             &::placeholder {
                 font-family: 'Fraunces', serif;
-                padding: 2% 4%;
+                // padding: 2% 4%;
             }
             &:focus {
                 outline: none;
