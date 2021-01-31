@@ -65,6 +65,19 @@ body a:visited {
   list-style: none;
 }
 
+.header__right.links a div.hoverBorder {
+  width: 100%;
+  height: 3px;
+  display: none;
+}
+
+.header__right.links a:hover div.hoverBorder {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  display: block;
+  background: linear-gradient(161deg, #005C9D 30%, #018ABD, #02B9F3 75%, #93E1Ed);
+}
+
 .header__right.menu {
   width: 50px;
   display: -webkit-box;
@@ -160,7 +173,7 @@ body a:visited {
   background: rgba(136, 136, 136, 0.3);
 }
 
-.header .dropdown a:hover#samples {
+.header .dropdown a:hover#portfolio {
   background: rgba(136, 136, 136, 0.3);
 }
 

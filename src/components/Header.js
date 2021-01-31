@@ -7,10 +7,10 @@ function Header() {
     const links = () => {
         return (
             <>
-                <Link to="/home" id="home" onClick={() => decideMenu()}><li>Home</li></Link>
-                <Link to="/about" id="about" onClick={() => decideMenu()}><li>About</li></Link>
-                <Link to="/portfolio" id="portfolio" onClick={() => decideMenu()}><li>Portfolio</li></Link>
-                <Link to="/contact" id="contact" onClick={() => decideMenu()}><li>Contact</li></Link>
+                <Link to="/home" id="home" onClick={() => decideMenu()}><li>Home</li><div className="hoverBorder"></div></Link>
+                <Link to="/about" id="about" onClick={() => decideMenu()}><li>About</li><div className="hoverBorder"></div></Link>
+                <Link to="/portfolio" id="portfolio" onClick={() => decideMenu()}><li>Portfolio</li><div className="hoverBorder"></div></Link>
+                <Link to="/contact" id="contact" onClick={() => decideMenu()}><li>Contact</li><div className="hoverBorder"></div></Link>
             </>
         )
     }

@@ -93,7 +93,12 @@ function Contact() {
                     _changeHandler={changeHandler}
                     _value={formData.content}
                 /> */}
-                <textarea placeholder='What can I do for you?' name='content' onChange={({ target: { value } }) => changeHandler('content', value)} value={formData.content} />
+                <textarea
+                    placeholder='What can I do for you?'
+                    name='content'
+                    value={formData.content}
+                    onChange={({ target: { value } }) => changeHandler('content', value)}
+                />
                 <Input
                     _type='submit'
                     _value='Submit'
