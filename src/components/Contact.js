@@ -20,17 +20,17 @@ function Contact() {
 
     useEffect(() => {
         if (formData.name.length > 0 && formData.name.length < 2) {
-            setErrors({ ...errors, nameError: 'Name must be at least 2 characters' })
+            setErrors(errors => ({ ...errors, nameError: 'Name must be at least 2 characters' }))
         } else if (formData.name.length >= 2) {
-            setErrors({ ...errors, nameError: '' })
+            setErrors(errors => ({ ...errors, nameError: '' }))
         }
     }, [formData.name])
 
     useEffect(() => {
         if (formData.email.length > 0 && !formData.email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,}$/)) {
-            setErrors({ ...errors, emailError: 'Please provide a valid email' })
+            setErrors(errors => ({ ...errors, emailError: 'Please provide a valid email' }))
         } else if (formData.email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,}$/)) {
-            setErrors({ ...errors, emailError: '' })
+            setErrors(errors => ({ ...errors, emailError: '' }))
         }
     }, [formData.email])
 
