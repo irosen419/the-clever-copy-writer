@@ -1,24 +1,24 @@
 const files = [
     {
-        'title': 'Title of Work Sample',
-        'address': '#'
+        'title': 'Restaurant Sample',
+        'address': '/samples/Restaurant Email.pdf'
     },
     {
-        'title': 'Title of Work Sample',
-        'address': '#'
+        'title': 'Fish Oil Supplement',
+        'address': '/samples/Fish Oil Supplement.pdf'
     },
     {
-        'title': 'Title of Work Sample',
-        'address': '#'
+        'title': 'Joyride Dog Harness',
+        'address': '/samples/Joyride Dog Harness.pdf'
     },
     {
-        'title': 'Title of Work Sample',
-        'address': '#'
+        'title': "Men's Dating Coach",
+        'address': "/samples/Men's Dating Coach.pdf"
     },
     {
-        'title': 'Title of Work Sample',
-        'address': '#'
-    },
+        'title': 'AWAI Build Your Own',
+        'address': '/samples/AWAI Build Your Own.pdf'
+    }
 
 ]
 
