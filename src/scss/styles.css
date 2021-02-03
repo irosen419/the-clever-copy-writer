@@ -26,6 +26,7 @@ body a:visited {
 
 .App {
   min-width: 100%;
+  min-height: 100vh;
 }
 
 .header {
