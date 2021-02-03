@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory } from 'react-router'
+import { IndexRoute, Router, Route, hashHistory } from 'react-router'
 import reportWebVitals from './reportWebVitals';
 
 import App from './App';
@@ -12,7 +12,7 @@ import Contact from './components/Contact';
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <Route path="home" component={Home} />
+      <IndexRoute component={Home} />
       <Route path="about" component={About} />
       <Route path="portfolio" component={Samples} />
       <Route path="contact" component={Contact} />
