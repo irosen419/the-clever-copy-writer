@@ -3,6 +3,7 @@ function Input({ _type, _placeholder, _name, _changeHandler, _value, _errors, _d
     return (
         <div className='inputDiv'>
             <input
+                id={_name}
                 type={_type}
                 placeholder={_placeholder}
                 name={_name}

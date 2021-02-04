@@ -429,6 +429,10 @@ body a:visited {
   cursor: pointer;
 }
 
+.contact form div.inputDiv div#required {
+  float: left;
+}
+
 .contact form textarea {
   height: 200px;
   width: 100%;
@@ -556,23 +560,15 @@ body a:visited {
   .header__right {
     font-size: 0.875rem;
   }
+  .contact form div.inputDiv {
+    width: 75%;
+  }
   .footer {
     width: 100vw;
   }
   .footer__contactButton {
     width: 33%;
     font-size: 1.25rem;
-  }
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .App::-webkit-scrollbar {
-    display: none;
-  }
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .App {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
   }
 }
 
@@ -599,6 +595,10 @@ body a:visited {
   }
   .samples .samplesInner .sample a {
     width: 50%;
+  }
+  .contact form div.inputDiv input#submit[type="submit"] {
+    width: 50%;
+    height: 50px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

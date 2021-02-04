@@ -103,13 +103,14 @@ function Contact() {
                     _changeHandler={changeHandler}
                     _value={formData.content}
                 /> */}
-                <div className='inputDiv'>
+                <div id="content" className='inputDiv'>
                     <textarea
                         placeholder='What can I do for you?'
                         name='content'
                         value={formData.content}
                         onChange={({ target: { value } }) => changeHandler('content', value)}
                     />
+                    <div id="required">* denotes required field</div>
                 </div>
                 <Input
                     _type='submit'
@@ -117,7 +118,6 @@ function Contact() {
                     _name='submit'
                     _disable={disableSubmit}
                 />
-
             </form>
         </div>
     )
