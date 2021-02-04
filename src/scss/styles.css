@@ -383,6 +383,7 @@ body a:visited {
 }
 
 .contact form div.inputDiv {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,14 +424,31 @@ body a:visited {
   padding: 0;
   width: 20%;
   height: 50px;
+  color: white;
+  background: linear-gradient(161deg, #005C9D 30%, #018ABD, #02B9F3 75%, #93E1Ed);
 }
 
 .contact form div.inputDiv input[type="submit"]:hover {
   cursor: pointer;
 }
 
-.contact form div.inputDiv div#required {
-  float: left;
+.contact form div.inputDiv p {
+  position: absolute;
+  bottom: -10%;
+  left: 5%;
+  color: red;
+}
+
+.contact form div.inputDiv#content {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact form div.inputDiv#content div#required {
+  margin-top: 10px;
+  margin-left: 5%;
+  color: grey;
 }
 
 .contact form textarea {

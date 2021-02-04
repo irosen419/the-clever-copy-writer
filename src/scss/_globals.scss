@@ -71,7 +71,7 @@ body {
                     div.hoverBorder {
                         transition: all 300ms ease-in-out;
                         display: block;
-                        background: linear-gradient(161deg,#005C9D 30%, #018ABD, #02B9F3 75%, #93E1Ed);;
+                        background: linear-gradient(161deg,#005C9D 30%, #018ABD, #02B9F3 75%, #93E1Ed);
                     }
                 }
             }
@@ -338,6 +338,7 @@ body {
         align-items: center;
 
         div.inputDiv {
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -368,14 +369,30 @@ body {
                     padding: 0;
                     width: 20%;
                     height: 50px;
+                    color: white;
+                    background: linear-gradient(161deg,#005C9D 30%, #018ABD, #02B9F3 75%, #93E1Ed);
                     &:hover {
                         cursor: pointer;
                     }
                 }
+
+            }
+            
+            p {
+                position: absolute;
+                bottom: -10%;
+                left: 5%;
+                color: red;
             }
 
-            div#required {
-                float: left;
+            &#content {
+                align-items: flex-start;
+                div#required {
+                    margin-top: 10px;
+                    margin-left: 5%;
+
+                    color: grey;
+                }
             }
         }
 
