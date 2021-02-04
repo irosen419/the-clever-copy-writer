@@ -265,8 +265,14 @@ body {
         margin-bottom: 7vh;
     }
 
-    h1, #byline {
-        margin: 7vh 0;
+    h1 {
+        margin-top: 7vh;
+        font-size: 2rem;
+    }
+
+    p:not(:first-child) {
+        font-size: 1rem;
+        color: grey;
     }
 
     .samplesInner {
@@ -278,41 +284,72 @@ body {
         width: 90%;
         margin-top: 7vh;
         margin-bottom:  10vh;
-
+        
         font-size: $main;
-
+        
         .sample {
-            height: 100px;
-    
+            
             flex-grow: 1fr;
-            min-width: 40%;
-            max-width: 50%;
-
+            min-width: 30%;
+            max-width: 40%;
+            
             display: flex;
             justify-content: center;
             align-items: center;
-
-            margin: 0 2%;
+            
+            margin: 2% 2%;
             color: black;
-
-            >* {
-                margin: 0 10px;
-            }
-
-            a {
-                background: black;
-                height: 40px;
-                width: 20%;
-                max-width: 150px;
-                border: 1px solid white;
+            
+            .innerSample {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 66%;
+                
+                padding: 5px;
+                border: 1px double rgb(62, 62, 62);
                 border-radius: 10px;
-                text-align: center;
-                line-height: 40px;
+                background: whitesmoke;
 
-                &:hover {
-                    cursor: pointer;
+                p {
+                    white-space: pre-line;
+
+                    &.title {
+                        width: 90%;
+                        margin-top: 10px;
+                        margin-bottom: 25px;
+                        text-align: center;
+                        border-bottom: 1px solid rgb(160, 160, 160);
+                    }
+
+                    &.preview {
+                        margin: 10px;
+                        margin-top: 0;
+                        margin-bottom: 15px;
+                        background: -webkit-linear-gradient(#333, rgb(96, 96, 96), rgb(157, 157, 157));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+
+                a {
+                    color: white;
+                    background: linear-gradient(161deg,#005C9D 30%, #018ABD, #02B9F3 75%, #93E1Ed);
+                    height: 40px;
+                    width: 100%;
+                    border: 1px solid white;
+                    border-radius: 10px;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 1.0rem;
+    
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
+
         }
     }
 
@@ -377,7 +414,7 @@ body {
                 }
 
             }
-            
+
             p {
                 position: absolute;
                 bottom: -10%;

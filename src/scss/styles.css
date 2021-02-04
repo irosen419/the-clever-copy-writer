@@ -285,8 +285,14 @@ body a:visited {
   margin-bottom: 7vh;
 }
 
-.samples h1, .samples #byline {
-  margin: 7vh 0;
+.samples h1 {
+  margin-top: 7vh;
+  font-size: 2rem;
+}
+
+.samples p:not(:first-child) {
+  font-size: 1rem;
+  color: grey;
 }
 
 .samples .samplesInner {
@@ -306,12 +312,11 @@ body a:visited {
 }
 
 .samples .samplesInner .sample {
-  height: 100px;
   -webkit-box-flex: 1fr;
       -ms-flex-positive: 1fr;
           flex-grow: 1fr;
-  min-width: 40%;
-  max-width: 50%;
+  min-width: 30%;
+  max-width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,26 +326,65 @@ body a:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 2%;
+  margin: 2% 2%;
   color: black;
 }
 
-.samples .samplesInner .sample > * {
-  margin: 0 10px;
+.samples .samplesInner .sample .innerSample {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 66%;
+  padding: 5px;
+  border: 1px double #3e3e3e;
+  border-radius: 10px;
+  background: whitesmoke;
 }
 
-.samples .samplesInner .sample a {
-  background: black;
+.samples .samplesInner .sample .innerSample p {
+  white-space: pre-line;
+}
+
+.samples .samplesInner .sample .innerSample p.title {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.samples .samplesInner .sample .innerSample p.preview {
+  margin: 10px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  background: -webkit-linear-gradient(#333, #606060, #9d9d9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.samples .samplesInner .sample .innerSample a {
+  color: white;
+  background: linear-gradient(161deg, #005C9D 30%, #018ABD, #02B9F3 75%, #93E1Ed);
   height: 40px;
-  width: 20%;
-  max-width: 150px;
+  width: 100%;
   border: 1px solid white;
   border-radius: 10px;
   text-align: center;
   line-height: 40px;
+  font-size: 1.0rem;
 }
 
-.samples .samplesInner .sample a:hover {
+.samples .samplesInner .sample .innerSample a:hover {
   cursor: pointer;
 }
 
