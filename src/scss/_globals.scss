@@ -8,7 +8,7 @@
 body {
     line-height: 1.3;
     font-size: 100%;
-    font-family: 'Fraunces', serif;
+    font-family: 'Prata', serif;
 
     background: $babyBlue;
 
@@ -188,6 +188,7 @@ body {
 
 // home page
 .home {
+    font-weight:lighter;
     &__top {
         position: relative;
         width: 100%;
@@ -220,21 +221,27 @@ body {
     }
 
     &__missionStatement {
-        width: 75%;
-        margin: 2.5% auto;
+        width: 50%;
+        padding: 30px 50px;
+        background: white;
+        margin: 0 auto;
         font-size: $main;
     }
 }
 
 // about page
 .about {
-    width: 75%;
+    width: 60%;
     margin: 5% auto;
+    background: white;
+    padding: 30px 50px;
     
     h1 {
         float: left;
-        width: 10%;
-        margin: 25px 75px;
+        text-align: center;
+        width: 12.5%;
+        border-bottom: 1px solid grey;
+        margin: 50px 75px;
     }
 
     p {
@@ -267,7 +274,9 @@ body {
 
     h1 {
         margin-top: 7vh;
-        font-size: 2rem;
+        margin-bottom: 1vh;
+        font-size: 2.5rem;
+        border-bottom: 1px solid rgb(157, 157, 157);
     }
 
     p:not(:first-child) {
@@ -282,7 +291,7 @@ body {
 
         height: 50%;
         width: 90%;
-        margin-top: 7vh;
+        margin-top: 3vh;
         margin-bottom:  10vh;
         
         font-size: $main;
@@ -307,42 +316,60 @@ body {
                 align-items: center;
                 max-width: 66%;
                 
-                padding: 5px;
+                padding-bottom: 0;
                 border: 1px double rgb(62, 62, 62);
                 border-radius: 10px;
-                background: whitesmoke;
+                background: rgb(240, 240, 240);
+
+                .previewContainer {
+                    background: white;
+                    padding-top: 10px;
+                    border: none;
+                    width: 95%;
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    p {
+                        white-space: pre-line;
+                        
+                        &.preview {
+                            margin: 10px;
+                            margin-top: 0;
+                            margin-bottom: 15px;
+                            font-size: 1.0rem;
+                            background: -webkit-linear-gradient(#333, rgb(96, 96, 96), rgb(157, 157, 157));
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
 
                 p {
-                    white-space: pre-line;
-
                     &.title {
-                        width: 90%;
+                        width: 95%;
                         margin-top: 10px;
                         margin-bottom: 25px;
                         text-align: center;
                         border-bottom: 1px solid rgb(160, 160, 160);
                     }
 
-                    &.preview {
-                        margin: 10px;
-                        margin-top: 0;
-                        margin-bottom: 15px;
-                        background: -webkit-linear-gradient(#333, rgb(96, 96, 96), rgb(157, 157, 157));
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
                 }
 
                 a {
-                    color: white;
-                    background: linear-gradient(161deg,#005C9D 30%, #018ABD, #02B9F3 75%, #93E1Ed);
-                    height: 40px;
-                    width: 100%;
-                    border: 1px solid white;
-                    border-radius: 10px;
-                    text-align: center;
-                    line-height: 40px;
-                    font-size: 1.0rem;
+                    width: 75%;
+                    button {
+                        color: white;
+                        background: linear-gradient(161deg,#005C9D 30%, #018ABD, #02B9F3 75%, #93E1Ed);
+                        border: 1px solid white;
+                        border-radius: 10px;
+                        text-align: center;
+                        line-height: 40px;
+                        font-size: 1.0rem;
+                        height: 40px;
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
     
                     &:hover {
                         cursor: pointer;
@@ -443,7 +470,7 @@ body {
 
 
             &::placeholder {
-                font-family: 'Fraunces', serif;
+                font-family: 'Prata', serif;
                 // padding: 2% 4%;
             }
             &:focus {
@@ -488,7 +515,7 @@ body {
     
     .home {
         &__top {
-            height: 150px;
+            height: 300px;
 
             img.top__image {
                 width: 100%;
@@ -503,8 +530,7 @@ body {
         }
 
         &__missionStatement {
-            margin-top: 10.0%;
-            margin-bottom: 10.0%;
+            width: 70%;
             font-size: $mainMobile;
         }
     }
@@ -524,7 +550,7 @@ body {
         }
 
         h1 {
-            width: 100%;
+            width: 17.5%;
             margin: 5% auto;
             text-align: center;
             display: block;
@@ -600,6 +626,13 @@ body {
                 top: 20%;
                 height: 40%;
             }
+        }
+    }
+
+    .about {
+        h1 {
+            font-size: 1rem;
+            width: 40%;
         }
     }
 

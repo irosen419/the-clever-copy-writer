@@ -8,7 +8,7 @@
 body {
   line-height: 1.3;
   font-size: 100%;
-  font-family: 'Fraunces', serif;
+  font-family: 'Prata', serif;
   background: #E2F3FB;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -194,6 +194,10 @@ body a:visited {
   }
 }
 
+.home {
+  font-weight: lighter;
+}
+
 .home__top {
   position: relative;
   width: 100%;
@@ -232,24 +236,30 @@ body a:visited {
 }
 
 .home__missionStatement {
-  width: 75%;
-  margin: 2.5% auto;
-  font-size: 1.5rem;
+  width: 50%;
+  padding: 30px 50px;
+  background: white;
+  margin: 0 auto;
+  font-size: 1.25rem;
 }
 
 .about {
-  width: 75%;
+  width: 60%;
   margin: 5% auto;
+  background: white;
+  padding: 30px 50px;
 }
 
 .about h1 {
   float: left;
-  width: 10%;
-  margin: 25px 75px;
+  text-align: center;
+  width: 12.5%;
+  border-bottom: 1px solid grey;
+  margin: 50px 75px;
 }
 
 .about p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .about img {
@@ -287,7 +297,9 @@ body a:visited {
 
 .samples h1 {
   margin-top: 7vh;
-  font-size: 2rem;
+  margin-bottom: 1vh;
+  font-size: 2.5rem;
+  border-bottom: 1px solid #9d9d9d;
 }
 
 .samples p:not(:first-child) {
@@ -306,9 +318,9 @@ body a:visited {
           justify-content: center;
   height: 50%;
   width: 90%;
-  margin-top: 7vh;
+  margin-top: 3vh;
   margin-bottom: 10vh;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .samples .samplesInner .sample {
@@ -345,43 +357,69 @@ body a:visited {
       -ms-flex-align: center;
           align-items: center;
   max-width: 66%;
-  padding: 5px;
+  padding-bottom: 0;
   border: 1px double #3e3e3e;
   border-radius: 10px;
-  background: whitesmoke;
+  background: #f0f0f0;
 }
 
-.samples .samplesInner .sample .innerSample p {
+.samples .samplesInner .sample .innerSample .previewContainer {
+  background: white;
+  padding-top: 10px;
+  border: none;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.samples .samplesInner .sample .innerSample .previewContainer p {
   white-space: pre-line;
 }
 
+.samples .samplesInner .sample .innerSample .previewContainer p.preview {
+  margin: 10px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.0rem;
+  background: -webkit-linear-gradient(#333, #606060, #9d9d9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .samples .samplesInner .sample .innerSample p.title {
-  width: 90%;
+  width: 95%;
   margin-top: 10px;
   margin-bottom: 25px;
   text-align: center;
   border-bottom: 1px solid #a0a0a0;
 }
 
-.samples .samplesInner .sample .innerSample p.preview {
-  margin: 10px;
-  margin-top: 0;
-  margin-bottom: 15px;
-  background: -webkit-linear-gradient(#333, #606060, #9d9d9d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.samples .samplesInner .sample .innerSample a {
+  width: 75%;
 }
 
-.samples .samplesInner .sample .innerSample a {
+.samples .samplesInner .sample .innerSample a button {
   color: white;
   background: linear-gradient(161deg, #005C9D 30%, #018ABD, #02B9F3 75%, #93E1Ed);
-  height: 40px;
-  width: 100%;
   border: 1px solid white;
   border-radius: 10px;
   text-align: center;
   line-height: 40px;
   font-size: 1.0rem;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .samples .samplesInner .sample .innerSample a:hover {
@@ -505,19 +543,19 @@ body a:visited {
 }
 
 .contact form textarea::-webkit-input-placeholder {
-  font-family: 'Fraunces', serif;
+  font-family: 'Prata', serif;
 }
 
 .contact form textarea:-ms-input-placeholder {
-  font-family: 'Fraunces', serif;
+  font-family: 'Prata', serif;
 }
 
 .contact form textarea::-ms-input-placeholder {
-  font-family: 'Fraunces', serif;
+  font-family: 'Prata', serif;
 }
 
 .contact form textarea::placeholder {
-  font-family: 'Fraunces', serif;
+  font-family: 'Prata', serif;
 }
 
 .contact form textarea:focus {
@@ -545,7 +583,7 @@ body a:visited {
 
 @media only screen and (max-width: 780px) {
   .home__top {
-    height: 150px;
+    height: 300px;
   }
   .home__top img.top__image {
     width: 100%;
@@ -559,9 +597,8 @@ body a:visited {
     height: 90%;
   }
   .home__missionStatement {
-    margin-top: 10.0%;
-    margin-bottom: 10.0%;
-    font-size: 0.825rem;
+    width: 70%;
+    font-size: 0.5rem;
   }
   .about {
     display: -webkit-box;
@@ -580,7 +617,7 @@ body a:visited {
     width: 75%;
   }
   .about p {
-    font-size: 0.825rem;
+    font-size: 0.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -593,7 +630,7 @@ body a:visited {
             align-items: center;
   }
   .about h1 {
-    width: 100%;
+    width: 17.5%;
     margin: 5% auto;
     text-align: center;
     display: block;
@@ -611,7 +648,7 @@ body a:visited {
     font-size: 0.875rem;
   }
   .samples .samplesInner {
-    font-size: 0.825rem;
+    font-size: 0.5rem;
   }
   .samples .samplesInner .sample a {
     width: 50%;
@@ -644,6 +681,10 @@ body a:visited {
   .home__top div.top__carousel {
     top: 20%;
     height: 40%;
+  }
+  .about h1 {
+    font-size: 1rem;
+    width: 40%;
   }
   .samples #byline {
     text-align: center;

@@ -10,8 +10,10 @@ function Samples() {
                     <div className="sample" key={`sample-${i}`}>
                         <div className="innerSample">
                             <p className="title">{title}</p>
-                            <p className="preview">{preview}</p>
-                            <a href={address} target="_blank" rel="noreferrer">Continue reading...</a>
+                            <div className="previewContainer">
+                                <p className="preview">{preview}</p>
+                                <a href={address} target="_blank" rel="noreferrer"><button>Continue reading...</button></a>
+                            </div>
                         </div>
                     </div>
                 )}

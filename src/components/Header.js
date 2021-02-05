@@ -25,7 +25,7 @@ function Header() {
 
     return (
         <div className="header">
-            <Link to="/home" className="header__left">The Clever Copy Writer</Link>
+            <Link to="/" className="header__left">The Clever Copy Writer</Link>
 
 
             <ul className="header__right links hide-for-mobile">
