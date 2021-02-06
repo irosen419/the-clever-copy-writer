@@ -1,75 +1,87 @@
-// function solution(num) {
-//     let strArray = num.toString()
-//     let numStr = ""
-//     if (num >= 0) {
-//         for (let i = 0; i < strArray.length; i++) {
-//             if (strArray[i] <= 5) {
-//                 numStr += '5' + strArray.substr(i)
-//                 break
+function solution(num) {
+    let strArray = num.toString()
+    let numStr = ""
+    for (let i = 0; i < strArray.length; i++) {
+        if (num >= 0) {
+            if (strArray[i] <= 5) {
+                numStr += '5' + strArray.substr(i)
+                break
+            }
+            numStr += strArray[i]
+            if (i === strArray.length - 1) {
+                numStr += '5'
+            }
+        } else {
+            if (strArray[i] >= 5) {
+                numStr += '5' + strArray.substr(i)
+                break
+            }
+            numStr += strArray[i]
+            if (i === strArray.length - 1) {
+                numStr += '5'
+            }
+        }
+    }
+    return parseInt(numStr)
+}
+
+console.log(solution(-222))
+
+// function solution(S) {
+//     let answer = Number.POSITIVE_INFINITY;
+//     for (let i = 0; i < S.length; i++) {
+//         for (let j = 0; j <= S.length; j++) {
+//             if (i === j) {
+//                 continue
 //             }
-//             numStr += strArray[i]
-//             if (i === strArray.length - 1) {
-//                 numStr += '5'
-//             }
-//         }
-//     } else {
-//         for (let i = 0; i < strArray.length; i++) {
-//             if (strArray[i] >= 5) {
-//                 numStr += '5' + strArray.substr(i)
-//                 break
-//             }
-//             numStr += strArray[i]
-//             if (i === strArray.length - 1) {
-//                 numStr += '5'
+//             let length = solutionHelper(S, i, j, answer)
+//             if (length < answer) {
+//                 answer = length
 //             }
 //         }
 //     }
-//     return parseInt(numStr)
+//     if (answer === Number.POSITIVE_INFINITY) {
+//         return -1;
+//     }
+//     return answer;
 // }
 
-// console.log(solution(-222))
+// function solutionHelper(S, i, j, answer) {
+//     let subString
+//     if (i < j) {
+//         subString = S.substr(i, j - i)
+//     } else {
+//         subString = S.substr(j, i - j)
+//     }
+//     // save letters in a set 
+//     let setOfLetters = new Set();
+//     for (let k = 0; k < subString.length; k++) {
+//         setOfLetters.add(subString[k]);
+//     }
 
-function solution(S) {
-    let answer = Number.POSITIVE_INFINITY;
-    for (let i = S.length; i >= 0; i--) {
-        let length = solutionHelper(S, 0, i, answer)
-        if (length < answer) {
-            answer = length
-        }
-    }
-    if (answer === Number.POSITIVE_INFINITY) {
-        return -1;
-    }
-    return answer;
-}
+//     for (let k = 0; k < subString.length; k++) {
+//         if (!setOfLetters.has(subString[k].toUpperCase()) || !setOfLetters.has(subString[k].toLowerCase())) {
+//             return answer;
+//         }
+//     }
 
-function solutionHelper(S, i, j, answer) {
-    // save letters in a set 
-    let setOfLetters = new Set();
-    for (let i = 0; i < j; i++) {
-        setOfLetters.add(S[i]);
-    }
-
-    for (let i = 0; i < S.length; i++) {
-        if (!setOfLetters.has(S[i].toUpperCase()) || !setOfLetters.has(S[i].toLowerCase())) {
-            return answer;
-        }
-    }
-
-    return j - i
-}
-console.log(solution('azABaabza'))
+//     return subString.length
+// }
+// console.log(solution('lEEtcodeiSBetETrThaNhAcKerRaNk'))
 
 // azABaabza => 5
 // TacoCat => -1
 // AcZCbaBz => 8
 // sSbBddAa => 2
+// AggrrRttTaatsG => 2
+// cOoKiEeSsnNcrEam => 2
+// cHoOChOo => 4
 
 // function daysOfTheWeek(S, K) {
-//     let days = { "Mon": 0, "Tues": 1, "Wed": 2, "Thurs": 3, "Fri": 4, "Sat": 5, "Sun": 6 }
-//     let opposite = { 0: "Mon", 1: "Tues", 2: "Wed", 3: "Thurs", 4: "Fri", 5: "Sat", 6: "Sun" }
+//     let days = { "Mon": 1, "Tues": 2, "Wed": 3, "Thurs": 4, "Fri": 5, "Sat": 6, "Sun": 7 }
+//     let opposite = { 1: "Mon", 2: "Tues", 3: "Wed", 4: "Thurs", 5: "Fri", 6: "Sat", 7: "Sun" }
 //     let givenDays = (K + days[S]) % 7
 //     return opposite[givenDays]
 // }
 
-// console.log(daysOfTheWeek("Sat", 23))
+// console.log(daysOfTheWeek("Sat", 23)) //=> Mon
