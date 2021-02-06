@@ -1,31 +1,31 @@
-function solution(num) {
-    let strArray = num.toString()
-    let numStr = ""
-    for (let i = 0; i < strArray.length; i++) {
-        if (num >= 0) {
-            if (strArray[i] <= 5) {
-                numStr += '5' + strArray.substr(i)
-                break
-            }
-            numStr += strArray[i]
-            if (i === strArray.length - 1) {
-                numStr += '5'
-            }
-        } else {
-            if (strArray[i] >= 5) {
-                numStr += '5' + strArray.substr(i)
-                break
-            }
-            numStr += strArray[i]
-            if (i === strArray.length - 1) {
-                numStr += '5'
-            }
-        }
-    }
-    return parseInt(numStr)
-}
+// function solution(num) {
+//     let strArray = num.toString()
+//     let numStr = ""
+//     for (let i = 0; i < strArray.length; i++) {
+//         if (num >= 0) {
+//             if (strArray[i] <= 5) {
+//                 numStr += '5' + strArray.substr(i)
+//                 break
+//             }
+//             numStr += strArray[i]
+//             if (i === strArray.length - 1) {
+//                 numStr += '5'
+//             }
+//         } else {
+//             if (strArray[i] >= 5) {
+//                 numStr += '5' + strArray.substr(i)
+//                 break
+//             }
+//             numStr += strArray[i]
+//             if (i === strArray.length - 1) {
+//                 numStr += '5'
+//             }
+//         }
+//     }
+//     return parseInt(numStr)
+// }
 
-console.log(solution(-222))
+// console.log(solution(-222))
 
 // function solution(S) {
 //     let answer = Number.POSITIVE_INFINITY;
@@ -77,11 +77,13 @@ console.log(solution(-222))
 // cOoKiEeSsnNcrEam => 2
 // cHoOChOo => 4
 
-// function daysOfTheWeek(S, K) {
-//     let days = { "Mon": 1, "Tues": 2, "Wed": 3, "Thurs": 4, "Fri": 5, "Sat": 6, "Sun": 7 }
-//     let opposite = { 1: "Mon", 2: "Tues", 3: "Wed", 4: "Thurs", 5: "Fri", 6: "Sat", 7: "Sun" }
-//     let givenDays = (K + days[S]) % 7
-//     return opposite[givenDays]
-// }
+function daysOfTheWeek(S, K) {
+    let days = { "Mon": 0, "Tues": 1, "Wed": 2, "Thurs": 3, "Fri": 4, "Sat": 5, "Sun": 6 }
+    let opposite = { 0: "Mon", 1: "Tues", 2: "Wed", 3: "Thurs", 4: "Fri", 5: "Sat", 6: "Sun" }
+    let givenDays = (K + days[S]) % 7
+    return opposite[givenDays]
+}
 
-// console.log(daysOfTheWeek("Sat", 23)) //=> Mon
+console.log(daysOfTheWeek("Thurs", 6)) 
+
+// Sat, 23 => Mon
