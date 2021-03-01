@@ -20,7 +20,7 @@ const files = [
         'preview': 'Hi Jim, \n\n Paul Wilson here from The Men’s Dating Coach...When’s the last time you did this? Many of us have been taught the safe and proper way...'
     },
     {
-        'title': 'AWAI Build Your Own with - Long Form Sales Letter',
+        'title': 'Long Form Sales Letter',
         'address': '/samples/AWAI Build Your Own.pdf',
         'preview': 'Dear Writer, \n\n I think you would agree that at some point in time, all businesses big or small need help to grow or even just to function effectively...'
     }
